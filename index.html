@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>Baymo · App Demo</title>
+<meta name="description" content="Interactive demo of Baymo, a home heart-monitoring app for children. Fictional child and simulated data.">
+<link rel="icon" type="image/png" href="assets/img/BaymoMark.png">
+<link rel="stylesheet" href="css/app.css">
+<link rel="stylesheet" href="css/exhibit.css">
+<link rel="stylesheet" href="css/guide.css">
+<link rel="stylesheet" href="css/onboarding.css">
+</head>
+<body>
+<div id="stage" class="guided">
+  <header class="g-head">
+    <img src="assets/img/BaymoMark.png" alt="" class="g-logo"><span class="g-brand">Baymo</span>
+    <button id="restartBtn" class="g-restart">Restart</button>
+  </header>
+  <section id="guide" class="g-left"></section>
+  <main class="g-phone"><div class="bezel"><div id="screen" class="screen"></div></div></main>
+  <footer class="g-foot">Demonstration with a fictional child and data. The vest, Bluetooth and ECG are simulated. Baymo does not diagnose.</footer>
+  <div id="idlewarn">Returning to the start in <b>10</b> s. Tap anywhere to stay.</div>
+</div>
+<script src="js/icons.js"></script>
+<script src="js/morph.js"></script>
+<script src="js/signal.js"></script>
+<script src="js/store.js"></script>
+<script src="js/core.js"></script>
+<script src="js/app-setup.js"></script>
+<script src="js/app-today.js"></script>
+<script src="js/app-diary.js"></script>
+<script src="js/app-history.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/guide.js"></script>
+</body>
+</html>

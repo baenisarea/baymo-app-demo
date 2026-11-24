@@ -1,0 +1,11 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="16.0685" height="17.6683" viewBox="0 0 16.0685 17.6683" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="child_neck">
+<mask id="mask0_0_68" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="17" height="18">
+<path id="child_neck_2" d="M16.0685 17.6683C14.3156 15.0096 4.50405 7.20558 0 4.00521C4.01712 3.26666 14.9729 -1.53389 15.3381 0.497116C15.6303 2.12192 15.9468 12.6216 16.0685 17.6683Z" fill="#FEC1A5"/>
+</mask>
+<g mask="url(#mask0_0_68)">
+<path id="child_neck_3" d="M16.0685 17.6683C14.3156 15.0096 4.50405 7.20558 0 4.00521C4.01712 3.26666 14.9729 -1.53389 15.3381 0.497116C15.6303 2.12192 15.9468 12.6216 16.0685 17.6683Z" fill="#FEC1A5"/>
+<path id="shadow" d="M-0.547332 1.78943C1.09604 4.00507 5.88006 7.77175 15.5211 6.59008C25.1622 5.4084 11.6866 -5.04264 -0.547332 1.78943Z" fill="#DF9D83"/>
+</g>
+</g>
+</svg>

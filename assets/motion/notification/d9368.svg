@@ -1,0 +1,11 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="56.9716" height="97.5347" viewBox="0 0 56.9716 97.5347" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="mom_arm_shirt">
+<mask id="mask0_0_188" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="57" height="98">
+<path id="mom_arm_shirt_2" d="M45.2998 85.0186C72.2573 57.2504 45.5025 47.9268 34.9628 16.7129C29.7605 5.15973 17.5722 -11.9065 10.4376 12.2538C-2.04793 52.9534 -1.31823 69.817 2.33011 77.9245C23.6123 109.746 36.5843 95.761 45.2998 85.0186Z" fill="#BAD9D3"/>
+</mask>
+<g mask="url(#mask0_0_188)">
+<path id="mom_arm_shirt_3" d="M45.2998 85.0186C72.2573 57.2504 45.5025 47.9268 34.9628 16.7129C29.7605 5.15973 17.5722 -11.9065 10.4376 12.2538C-2.04793 52.9534 -1.31823 69.817 2.33011 77.9245C23.6123 109.746 36.5843 95.761 45.2998 85.0186Z" fill="#BAD9D3"/>
+<path id="shirt_shadow" d="M5.57299 43.0625C4.35701 67.5877 8.81609 108.125 17.5315 52.5888C38.0031 -12.2713 10.4376 -8.62277 5.57299 43.0625Z" fill="#5D8F8D"/>
+</g>
+</g>
+</svg>

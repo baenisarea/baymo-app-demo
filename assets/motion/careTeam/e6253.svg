@@ -1,0 +1,11 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="26.2488" height="37.8193" viewBox="0 0 26.2488 37.8193" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="doctor_arm_moving">
+<mask id="mask0_0_55" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="27" height="38">
+<path id="doctor_arm_moving_2" d="M5.87215 35.5236C-6.36592 26.957 3.19489 -4.44138 10.4614 0.530415C17.5366 3.52617 24.1528 5.34907 25.3766 8.56157C26.9063 12.5772 26.9063 38.0094 21.361 37.8182C15.8156 37.627 6.82823 37.0535 5.87215 35.5236Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_0_55)">
+<path id="doctor_arm_moving_3" d="M5.87215 35.5236C-6.36592 26.957 3.19489 -4.44138 10.4614 0.530415C17.5366 3.52617 24.1528 5.34907 25.3766 8.56157C26.9063 12.5772 26.9063 38.0094 21.361 37.8182C15.8156 37.627 6.82823 37.0535 5.87215 35.5236Z" fill="white"/>
+<path id="arm_shadow" d="M10.4614 1.29504C3.38638 -0.61698 -3.57413 28.1805 6.82822 34.7585C14.4771 30.3606 14.0946 2.27692 10.4614 1.29504Z" fill="#AEC2C6"/>
+</g>
+</g>
+</svg>

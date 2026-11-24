@@ -1,0 +1,104 @@
+/* App Demo · guided two-column layout. White, minimal, Baymo type and colour. */
+/* white with the app's clinical dots (as BaymoClinicalBackground on the Recording screen): tiny, soft, even.
+   One static background on the stage, so it never re-renders or moves during navigation; the phone keeps its own backgrounds. */
+#stage.guided { color: #1C1C1E; background-color: #FFFFFF;
+  background-image: radial-gradient(rgba(0,156,166,.16) 1.1px, transparent 1.3px); background-size: 18px 18px; background-position: 9px 9px; }
+#stage.guided .screen { background-color: var(--bg); }
+/* keep work local: a phone update never re-lays out the left column, and the reverse */
+#guide, .g-left { contain: layout paint; }
+#screen { contain: layout paint; }
+.g-head { position: absolute; z-index: 5; left: 120px; width: 1010px; top: 56px; display: flex; align-items: center; gap: 14px; }
+.g-logo { width: 44px; height: 44px; border-radius: 10px; }
+.g-brand { font-size: 26px; font-weight: 700; color: #00919E; letter-spacing: -.2px; }
+.g-restart { margin-left: auto; font: 500 18px var(--font); color: #8E8E93; background: none; border: 0; padding: 12px 4px; cursor: pointer; }
+
+.g-left { position: absolute; left: 120px; top: 0; bottom: 0; width: 1040px; display: flex; align-items: center; gap: 72px; }
+.g-body { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.g-rail { width: 290px; flex: none; display: flex; flex-direction: column; gap: 2px; }
+.g-rail button { display: flex; align-items: baseline; gap: 14px; text-align: left; font: 500 19px/1.25 var(--font); color: #8E8E93; background: none; border: 0; padding: 13px 0; cursor: pointer; }
+.g-rail button .n { font-size: 15px; font-weight: 600; color: #C7C7CC; width: 22px; font-variant-numeric: tabular-nums; }
+.g-rail button.on { color: #00919E; font-weight: 600; }
+.g-rail button.on .n { color: #00919E; }
+.g-sec { font-size: 18px; font-weight: 600; color: #8E8E93; margin-bottom: 14px; }
+.g-count { font-size: 18px; font-weight: 600; color: #00919E; }
+.g-sim { margin-top: 26px; align-self: flex-start; font: 600 20px var(--font); color: #00919E; background: #E4F8FA; border: 0; border-radius: 999px; padding: 14px 24px; cursor: pointer; }
+.g-sim:active { transform: scale(.97); }
+.g-progress { display: flex; align-items: center; gap: 16px; margin-bottom: 26px; }
+.g-chap { display: flex; flex-direction: column; gap: 10px; }
+.g-segs { display: flex; gap: 4px; }
+.g-segs span { width: 22px; height: 6px; border-radius: 3px; background: #E5E5EA; transition: background .3s; }
+.g-segs span.done { background: rgba(0,145,158,.35); }
+.g-segs span.on { background: #00919E; }
+.g-chname { font-size: 14px; font-weight: 500; color: #C7C7CC; white-space: nowrap; }
+.g-chap.on .g-chname { color: #00919E; font-weight: 600; }
+.g-optlabel { margin-top: 30px; font-size: 16px; font-weight: 600; color: #8E8E93; text-transform: uppercase; letter-spacing: .6px; }
+.g-num { font-size: 22px; font-weight: 600; color: #00919E; margin-bottom: 14px; }
+.g-title { margin: 0 0 20px; font-size: 56px; line-height: 1.08; font-weight: 700; letter-spacing: -1px; color: #1C1C1E; }
+.g-hero { font-size: 72px; }
+.g-text { margin: 0; font-size: 27px; line-height: 1.4; color: #3C3C43; max-width: 680px; }
+.g-tap { margin: 28px 0 0; font-size: 22px; color: #8E8E93; }
+.g-tap b { color: #00919E; font-weight: 600; }
+.g-note { margin: 18px 0 0; display: flex; align-items: center; gap: 8px; font-size: 19px; color: #8E8E93; }
+.g-note .ic { width: 20px; height: 20px; flex: none; }
+.g-results { margin-top: 10px; display: inline-flex; align-self: flex-start; padding: 4px; border-radius: 16px; background: #F2F2F7; }
+.g-results button { font: 600 20px var(--font); color: #3C3C43; background: none; border: 0; border-radius: 12px; padding: 14px 22px; cursor: pointer; }
+.g-results button.on { background: #FFFFFF; color: #00919E; }
+.g-actions { margin-top: 56px; display: flex; align-items: center; gap: 28px; }
+/* how to use the demo: a quiet line under Back / Next */
+.g-hint { margin: 22px 0 0; display: flex; align-items: center; gap: 10px; font-size: 19px; line-height: 1.35; color: #8E8E93; max-width: 640px; }
+.g-hint .ic { width: 22px; height: 22px; flex: none; color: #00919E; }
+.g-next { font: 600 26px var(--font); color: #fff; background: #00919E; border: 0; border-radius: 999px; height: 76px; padding: 0 56px; min-width: 220px; cursor: pointer; }
+.g-next:active, .g-back:active, .g-results button:active { transform: scale(.97); }
+.g-next.nudge { animation: nudge .6s; }
+.g-back { font: 500 24px var(--font); color: #8E8E93; background: none; border: 0; height: 76px; padding: 0 12px; cursor: pointer; }
+@keyframes gIn { from { opacity: 0; transform: translateY(8px); } }
+@keyframes nudge { 30% { transform: scale(1.07); } 60% { transform: scale(.98); } }
+
+/* phone: plain device frame, no shadow */
+.g-phone { position: absolute; right: 150px; top: 50%; width: 428px; height: 900px; margin-top: -495px; }
+.g-phone .bezel { padding: 13px; border-radius: 70px; background: #1C1C1E; box-shadow: none; transform: scale(1.1); transform-origin: top center; }
+.g-phone .bezel .screen { border-radius: 57px; }
+
+.g-foot { position: absolute; left: 120px; bottom: 52px; font-size: 17px; color: #AEAEB2; }
+#stage.guided #idlewarn { background: #1C1C1E; }
+
+/* ---------- animations ported from the iOS source ---------- */
+/* OfflineSetupView: pages cross-fade, easeInOut 0.2 s */
+.page[data-key^="setup-"], .page[data-key="bt"] { animation: fadeIn .2s ease-in-out both; }
+/* RootView: setup → tabs with the default animation (0.35 s) */
+#screen > .base[data-key="base-main"] { animation: fadeIn .35s ease-in-out both; }
+/* SessionView: stage changes and check updates use withAnimation (default 0.35 s) */
+.page[data-key^="session-"] { animation: fadeIn .35s ease-in-out both; }
+.statuspill, .edot, .sensordiagram + * { transition: background-color .35s, color .35s, box-shadow .35s; }
+/* NoteSignFlowView: the saved outcome appears with .smooth(duration: 0.3) */
+.layer.cover.smooth > .pagewrap > .page { animation: fadeIn .3s cubic-bezier(.25,.1,.25,1) both !important; }
+/* SessionView timer: .contentTransition(.numericText(countsDown: true)) */
+.bigtimer .dg { display: inline-block; animation: numDown .35s cubic-bezier(.2,.8,.2,1) both; }
+@keyframes numDown { from { opacity: 0; transform: translateY(-38%); filter: blur(6px); } }
+/* RecordingWater canvas */
+canvas.rwater { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+/* SwipeToDelete (88 pt) / swipeActions, .snappy */
+.swipe { position: relative; display: block; overflow: hidden; border-radius: 22px; }
+.swipe-del { position: absolute; top: 0; right: 0; bottom: 0; width: 88px; display: flex; }
+.swipe-del button { flex: 1; margin-left: 6px; border-radius: 16px; background: #FF3B30; color: #fff; font-weight: 600; font-size: 17px; }
+.swipe-content { position: relative; transition: transform .32s cubic-bezier(.25,1.1,.4,1); touch-action: pan-y; }
+.swipe-content > * { width: 100%; }
+.hrow { background: var(--bg); border-radius: 22px; }
+/* HistoryDatePager: .smooth(duration: 0.28) between weeks */
+.wkwrap { overflow: hidden; touch-action: pan-y; }
+.wk.from-r { animation: wkR .28s cubic-bezier(.25,.1,.25,1) both; }
+.wk.from-l { animation: wkL .28s cubic-bezier(.25,.1,.25,1) both; }
+@keyframes wkR { from { transform: translateX(100%); } }
+@keyframes wkL { from { transform: translateX(-100%); } }
+.ic44 { width: 44px !important; height: 44px !important; }
+@media (prefers-reduced-motion: reduce) { .wk, .bigtimer .dg, .page { animation: none !important; } }
+
+.g-sims { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+.g-sims .g-sim { margin-top: 0; }
+
+/* ---------- modes: other situations at the current step ---------- */
+.g-modes { margin-top: 34px; }
+.g-optlabel span { margin-left: 10px; text-transform: none; letter-spacing: 0; font-weight: 500; color: #AEAEB2; }
+.g-modelist { flex-wrap: wrap; max-width: 760px; }
+.g-modelist button { padding: 12px 20px; font-size: 19px; }
+.g-modes + .g-actions { margin-top: 44px; }
