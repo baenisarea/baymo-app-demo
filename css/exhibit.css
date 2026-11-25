@@ -6,9 +6,9 @@ html, body { margin: 0; height: 100%; overflow: hidden; background: #FFFFFF; fon
 /* header */
 .ex-head { position: absolute; left: 0; right: 0; top: 0; height: 92px; display: flex; align-items: center; gap: 16px; padding: 0 56px; }
 .ex-logo { width: 52px; height: 52px; border-radius: 13px; box-shadow: 0 2px 8px rgba(0,0,0,.12); }
-.ex-brand { font-size: 32px; font-weight: 700; color: #00919E; letter-spacing: -.3px; }
+.ex-brand { font-size: 32px; font-weight: 500; color: #00919E; letter-spacing: -.3px; }
 .ex-chips { display: flex; gap: 8px; margin-left: 18px; }
-.ex-chips span { font-size: 15px; font-weight: 600; padding: 7px 14px; border-radius: 999px; background: rgba(255,255,255,.75); color: #1E555C; box-shadow: inset 0 0 0 1px rgba(0,145,158,.18); }
+.ex-chips span { font-size: 15px; font-weight: 400; padding: 7px 14px; border-radius: 999px; background: rgba(255,255,255,.75); color: #1E555C; box-shadow: inset 0 0 0 1px rgba(0,145,158,.18); }
 .ex-chips span:last-child { background: #FFF3DC; color: #8A5A00; box-shadow: none; }
 .ex-staff { margin-left: auto; display: flex; gap: 10px; }
 .ex-staff button { font: 600 15px var(--font); height: 44px; padding: 0 18px; border-radius: 22px; background: rgba(255,255,255,.7); color: #1E555C; border: 0; cursor: pointer; box-shadow: inset 0 0 0 1px rgba(0,145,158,.2); }
@@ -30,7 +30,7 @@ html, body { margin: 0; height: 100%; overflow: hidden; background: #FFFFFF; fon
 .ex-phone { position: absolute; left: 712px; top: 96px; width: 470px; height: 970px; display: flex; flex-direction: column; align-items: center; }
 .bezel { padding: 13px; border-radius: 70px; background: linear-gradient(145deg, #2A2E33, #0D0F12); box-shadow: 0 30px 70px rgba(10,50,58,.35), inset 0 0 0 2px #3C4148; transform: scale(1.04); transform-origin: top center; }
 .bezel .screen { border-radius: 57px; }
-.ex-caption { position: absolute; bottom: 0; font-size: 14px; font-weight: 600; color: #4C7A80; letter-spacing: .3px; }
+.ex-caption { position: absolute; bottom: 0; font-size: 14px; font-weight: 400; color: #4C7A80; letter-spacing: .3px; }
 
 /* Vest Simulator panel: styled as the simulator app on a second phone (dark, test device) */
 .ex-sim { position: absolute; right: 56px; top: 104px; width: 640px; height: 948px; border-radius: 40px; background: #12181C; color: #E8F3F4; box-shadow: 0 24px 60px rgba(10,50,58,.3); overflow: hidden; }
@@ -39,8 +39,8 @@ html, body { margin: 0; height: 100%; overflow: hidden; background: #FFFFFF; fon
 .simtitle { font-size: 26px; font-weight: 700; }
 .simsub { font-size: 14px; color: rgba(232,243,244,.6); }
 .testpill { font-size: 12px; font-weight: 800; letter-spacing: 1px; padding: 6px 10px; border-radius: 8px; background: #FFDD45; color: #2B2200; }
-.linkline { margin-top: 12px; display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; }
-.linkline .sec { color: rgba(232,243,244,.6); font-weight: 500; }
+.linkline { margin-top: 12px; display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 500; }
+.linkline .sec { color: rgba(232,243,244,.6); font-weight: 400; }
 .ldot { width: 10px; height: 10px; border-radius: 50%; background: #8A9599; }
 .linkline.on .ldot { background: #34C759; box-shadow: 0 0 0 4px rgba(52,199,89,.2); }
 .linkline.wait .ldot { background: #FFCC00; animation: blink 1.2s infinite; }
@@ -50,7 +50,7 @@ html, body { margin: 0; height: 100%; overflow: hidden; background: #FFFFFF; fon
 .simbody::-webkit-scrollbar { display: none; }
 .simbody section { padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.06); }
 .simbody section.two { display: grid; grid-template-columns: 1fr 1.2fr; gap: 22px; }
-.simbody h4 { margin: 0 0 10px; font-size: 13px; font-weight: 700; letter-spacing: .8px; text-transform: uppercase; color: rgba(232,243,244,.55); }
+.simbody h4 { margin: 0 0 10px; font-size: 13px; font-weight: 500; letter-spacing: .8px; text-transform: uppercase; color: rgba(232,243,244,.55); }
 #simcanvas { width: 100%; height: 92px; border-radius: 14px; background: #0A1013; display: block; }
 .simnote { display: flex; gap: 6px; align-items: flex-start; margin-top: 8px; font-size: 13px; line-height: 1.4; color: rgba(232,243,244,.55); }
 .simnote .ic { margin-top: 2px; }
@@ -76,7 +76,7 @@ html, body { margin: 0; height: 100%; overflow: hidden; background: #FFFFFF; fon
 .sensors { display: flex; gap: 18px; align-items: flex-start; }
 .vestmini { padding: 14px; border-radius: 20px; background: #E4F8FA; }
 .resetsens { margin-top: 12px; display: inline-flex; align-items: center; gap: 8px; font: 600 15px var(--font); padding: 11px 18px; border-radius: 14px; background: rgba(255,255,255,.1); color: #E8F3F4; border: 0; cursor: pointer; }
-#simflash { position: absolute; left: 26px; right: 26px; bottom: 22px; padding: 14px 18px; border-radius: 16px; background: #FFDD45; color: #2B2200; font-weight: 600; font-size: 15px; opacity: 0; transform: translateY(10px); transition: .25s; pointer-events: none; }
+#simflash { position: absolute; left: 26px; right: 26px; bottom: 22px; padding: 14px 18px; border-radius: 16px; background: #FFDD45; color: #2B2200; font-weight: 500; font-size: 15px; opacity: 0; transform: translateY(10px); transition: .25s; pointer-events: none; }
 #simflash.on { opacity: 1; transform: none; }
 
 /* entry screen + idle notice */
@@ -91,7 +91,8 @@ html, body { margin: 0; height: 100%; overflow: hidden; background: #FFFFFF; fon
 .at-fine { margin: 6px 0 0; font-size: 18px; color: #4C7A80; }
 .at-motion { width: 620px; height: 680px; position: relative; pointer-events: none; }
 .at-motion iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-#idlewarn { position: absolute; z-index: 150; left: 50%; bottom: 36px; transform: translate(-50%, 20px); padding: 18px 28px; border-radius: 999px; background: #12464E; color: #fff; font-size: 20px; font-weight: 600; opacity: 0; transition: .3s; pointer-events: none; }
+#idlewarn { position: absolute; z-index: 150; left: 50%; bottom: 36px; transform: translate(-50%, 20px); padding: 18px 28px; border-radius: 999px; background: #12464E; color: #fff; font-size: 20px; font-weight: 500; opacity: 0; transition: .3s; pointer-events: none; }
+#idlewarn b { font-weight: 500; }
 #idlewarn.on { opacity: 1; transform: translate(-50%, 0); }
 
 /* ---------- app components added for the web build ---------- */
