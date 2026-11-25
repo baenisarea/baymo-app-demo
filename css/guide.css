@@ -1,7 +1,7 @@
 /* App Demo · guided two-column layout. White, minimal, Baymo type and colour. */
 /* white with the app's clinical dots (as BaymoClinicalBackground on the Recording screen): tiny, soft, even.
    One static background on the stage, so it never re-renders or moves during navigation; the phone keeps its own backgrounds. */
-#stage.guided { color: #1C1C1E; background-color: #FFFFFF;
+#stage.guided { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color: #1C1C1E; background-color: #FFFFFF;
   background-image: radial-gradient(rgba(0,156,166,.16) 1.1px, transparent 1.3px); background-size: 18px 18px; background-position: 9px 9px; }
 #stage.guided .screen { background-color: var(--bg); }
 /* keep work local: a phone update never re-lays out the left column, and the reverse */
@@ -35,7 +35,7 @@
 .g-num { font-size: 22px; font-weight: 400; color: #00919E; margin-bottom: 14px; }
 .g-title { margin: 0 0 20px; font-size: 56px; line-height: 1.08; font-weight: 700; letter-spacing: -1px; color: #1C1C1E; }
 .g-hero { font-size: 72px; }
-.g-text { margin: 0; font-size: 27px; line-height: 1.4; color: #3C3C43; max-width: 680px; }
+.g-text { margin: 0; font-size: 27px; line-height: 1.4; font-weight: 300; color: #48484A; max-width: 680px; }
 .g-tap { margin: 28px 0 0; font-size: 22px; color: #8E8E93; }
 .g-tap b { color: #00919E; font-weight: 500; }
 .g-note { margin: 18px 0 0; display: flex; align-items: center; gap: 8px; font-size: 19px; color: #8E8E93; }
